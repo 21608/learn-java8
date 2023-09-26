@@ -13,5 +13,9 @@ public class OptionalMain {
 		// 引数がnullならば空の、nullでないなら引数を値に持つOptionalインスタンスを返す
 		Optional<Object> oNull = Optional.ofNullable(null);
 		Optional<Object> oNonNull = Optional.ofNullable(123);
+		
+		System.out.println(oStr.get());
+		System.out.println(oEmpty.orElse("empty"));
+		System.out.println(oNull.orElseGet(() -> "elseGet"));	
 	}
 }
