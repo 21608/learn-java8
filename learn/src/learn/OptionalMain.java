@@ -17,5 +17,9 @@ public class OptionalMain {
 		System.out.println(oStr.get());
 		System.out.println(oEmpty.orElse("empty"));
 		System.out.println(oNull.orElseGet(() -> "elseGet"));	
+
+		// 値の存在確認
+		System.out.println(oNonNull.isPresent());
+		System.out.println(oNull.isEmpty());
 	}
 }
