@@ -21,5 +21,11 @@ public class OptionalMain {
 		// 値の存在確認
 		System.out.println(oNonNull.isPresent());
 		System.out.println(oNull.isEmpty());
+		oStr.ifPresent(s -> System.out.println(s));
+		try {
+			oNull.orElseThrow(() -> new Exception());
+		} catch (Exception e) {
+			System.out.println("値が存在しないため例外発生");
+		}
 	}
 }
